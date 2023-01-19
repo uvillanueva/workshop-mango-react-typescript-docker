@@ -1,0 +1,33 @@
+version: "3"
+services:
+    db:
+        container_name: mongodb
+        image: mongo
+        restart: 
+        ports: 
+            - 27017:27017
+        volumes:
+            - 
+        command:  
+    server:
+        build: 
+        container_name: 
+        ports:
+            - 8888:8888
+        volumes:
+            -
+            -
+            -
+        links:
+            - 
+    web:
+        build:
+        container_name: 
+        ports:
+            - 8889:8889
+        volumes:
+            - 
+            - 
+volumes:
+    mongodb:
+    data-volume:
