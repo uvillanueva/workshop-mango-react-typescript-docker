@@ -6,7 +6,7 @@ For this part will allow you to learn create your own database with mongoose, ty
 
 ### Run the code 
 
-as the part 1, you can run entire project by just running this following command:
+in both workshop you can (will) run entire project by just running this following command:
 
     sudo docker-compose up --build
 to check if it worked well you can open [http://localhost:8888](http://localhost:8888) to view it in your browser.
