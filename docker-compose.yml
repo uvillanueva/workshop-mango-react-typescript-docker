@@ -3,31 +3,29 @@ services:
     db:
         container_name: mongodb
         image: mongo
-        restart: 
+        restart: always
         ports: 
             - 27017:27017
         volumes:
-            - 
-        command:  
+            - ./mongo:/server/mongo
+        #command: bundle exec thin -p 3000
     server:
-        build: 
-        container_name: 
+        build: ./server
+        container_name: server
         ports:
             - 8888:8888
         volumes:
-            -
-            -
-            -
+            - ./server/src:/server/src
         links:
-            - 
+            - db
     web:
-        build:
-        container_name: 
+        build: ./front
+        container_name: front
         ports:
             - 8889:8889
         volumes:
-            - 
-            - 
+            - ./front/public:/front/public
+            - ./front/src:/front/src
 volumes:
     mongodb:
     data-volume:
